@@ -24,7 +24,7 @@ public class appointments {
      * 预约人
      */
     @TableField(value = "name")
-    private Long name;
+    private String name;
 
     /**
      * 联系电话
@@ -54,13 +54,13 @@ public class appointments {
      * 修理品牌
      */
     @TableField(value = "brand_name")
-    private Long brandname;
+    private String brandname;
 
     /**
      * 修理类型
      */
     @TableField(value = "repair_type")
-    private Long repairtype;
+    private String repairtype;
 
     /**
      * 创建时间

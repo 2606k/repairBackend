@@ -28,6 +28,12 @@ public class WeddingUser {
     private String username;
 
     /**
+     * 微信OpenID
+     */
+    @TableField(value = "openid")
+    private String openid;
+
+    /**
      * 头像URL
      */
     @TableField(value = "avatar_url")

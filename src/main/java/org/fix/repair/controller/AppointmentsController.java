@@ -58,7 +58,7 @@ public class AppointmentsController {
 
             if (time1 != null && !time1.toString().trim().isEmpty()) {
 
-                time1.toString()
+                String time = time1.toString();
                 // 将前端传来的日期字符串转换为LocalDate
                 LocalDate queryDate = LocalDate.parse(time);
 

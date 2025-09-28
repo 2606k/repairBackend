@@ -11,7 +11,7 @@ import java.io.InputStream;
 import java.util.List;
 
 @RestController
-@RequestMapping("/wedding/photo")
+@RequestMapping("/repair/wedding/photo")
 public class WeddingPhotoController {
     private final WeddingPhotoService photoService;
 

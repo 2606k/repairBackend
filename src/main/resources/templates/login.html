@@ -185,12 +185,12 @@
 
             $.ajax({
                 type: "POST",
-                url: "/user/checklogin",
+                url: "/repair/user/checklogin",
                 contentType: "application/json",
                 data: JSON.stringify(formData),
                 success: function(response) {
                     if (response.code === 200) {
-                        window.location.href = "/user/dashboard"; // 登录成功后跳转到管理后台
+                        window.location.href = "/repair/user/dashboard"; // 登录成功后跳转到管理后台
                     } else {
                         $("#loginErrorMsg").text(response.msg).show();
                     }
@@ -224,7 +224,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "/user/register",
+                url: "/repair/user/register",
                 contentType: "application/json",
                 data: JSON.stringify(formData),
                 success: function(response) {

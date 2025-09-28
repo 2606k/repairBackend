@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/brand")
+@RequestMapping("/repair/brand")
 public class BrandsController {
 
     private final BrandsService brandsService;

@@ -75,27 +75,27 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/dashboard">
+                            <a class="nav-link" href="/repair/user/dashboard">
                                 <i class="bi bi-house-door"></i> 控制台
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/category/manage">
+                            <a class="nav-link" href="/repair/category/manage">
                                 <i class="bi bi-tags"></i> 分类管理
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="/brand/manage">
+                            <a class="nav-link active" href="/repair/brand/manage">
                                 <i class="bi bi-award"></i> 品牌管理
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/appointments">
+                            <a class="nav-link" href="/repair/user/appointments">
                                 <i class="bi bi-calendar-check"></i> 预约记录
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/login" onclick="return confirm('确定要退出吗？')">
+                            <a class="nav-link" href="/repair/user/login" onclick="return confirm('确定要退出吗？')">
                                 <i class="bi bi-box-arrow-right"></i> 退出登录
                             </a>
                         </li>
@@ -274,7 +274,7 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "/brand/add",
+                    url: "/repair/brand/add",
                     contentType: "application/json",
                     data: JSON.stringify(formData),
                     success: function(response) {
@@ -309,7 +309,7 @@
             
             $.ajax({
                 type: "POST",
-                url: "/wedding/photo/upload",
+                url: "/repair/wedding/photo/upload",
                 data: formData,
                 processData: false,
                 contentType: false,
@@ -371,7 +371,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "/brand/delete",
+                url: "/repair/brand/delete",
                 data: { id: id },
                 success: function(response) {
                     if (response.code === 200) {

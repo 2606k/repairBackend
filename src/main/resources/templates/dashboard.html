@@ -81,27 +81,27 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/user/dashboard">
+                            <a class="nav-link active" href="/repair/user/dashboard">
                                 <i class="bi bi-house-door"></i> 控制台
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/category/manage">
+                            <a class="nav-link" href="/repair/category/manage">
                                 <i class="bi bi-tags"></i> 分类管理
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/brand/manage">
+                            <a class="nav-link" href="/repair/brand/manage">
                                 <i class="bi bi-award"></i> 品牌管理
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/appointments">
+                            <a class="nav-link" href="/repair/user/appointments">
                                 <i class="bi bi-calendar-check"></i> 预约记录
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/user/login" onclick="return confirm('确定要退出吗？')">
+                            <a class="nav-link" href="/repair/user/login" onclick="return confirm('确定要退出吗？')">
                                 <i class="bi bi-box-arrow-right"></i> 退出登录
                             </a>
                         </li>
@@ -185,19 +185,19 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-3 mb-3">
-                                        <a href="/category/manage" class="btn quick-action-btn w-100 p-3">
+                                        <a href="/repair/category/manage" class="btn quick-action-btn w-100 p-3">
                                             <i class="bi bi-plus-lg d-block mb-2" style="font-size: 1.5rem;"></i>
                                             添加分类
                                         </a>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <a href="/brand/manage" class="btn quick-action-btn w-100 p-3">
+                                        <a href="/repair/brand/manage" class="btn quick-action-btn w-100 p-3">
                                             <i class="bi bi-plus-lg d-block mb-2" style="font-size: 1.5rem;"></i>
                                             添加品牌
                                         </a>
                                     </div>
                                     <div class="col-md-3 mb-3">
-                                        <a href="/user/appointments" class="btn quick-action-btn w-100 p-3">
+                                        <a href="/repair/user/appointments" class="btn quick-action-btn w-100 p-3">
                                             <i class="bi bi-eye d-block mb-2" style="font-size: 1.5rem;"></i>
                                             查看预约
                                         </a>
@@ -265,7 +265,7 @@
 
         function loadStatistics() {
             // 加载分类统计
-            $.get('/category/list', function(response) {
+            $.get('/repair/category/list', function(response) {
                 if (response.code === 200) {
                     $('#categoryCount').text(response.data.length);
                 }
@@ -274,7 +274,7 @@
             });
 
             // 加载品牌统计
-            $.get('/brand/list', function(response) {
+            $.get('/repair/brand/list', function(response) {
                 if (response.code === 200) {
                     $('#brandCount').text(response.data.length);
                 }
@@ -285,7 +285,7 @@
             // 加载预约统计
             // 加载预约统计
             $.ajax({
-                url: '/appoint/list',
+                url: '/repair/appoint/list',
                 type: 'POST',
                 contentType: 'application/json',  // 必须设置这个
                 data: JSON.stringify({}),         // 空JSON对象
